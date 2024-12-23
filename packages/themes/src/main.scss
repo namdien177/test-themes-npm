@@ -1,6 +1,6 @@
 @use "1-variables" as vars;
 
-@forward '1-variables/index';
+@use '1-variables';
 
 body {
   font-family: vars.$typeface-font-brand, sans-serif;
