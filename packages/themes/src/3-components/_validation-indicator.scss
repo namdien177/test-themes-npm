@@ -1,0 +1,53 @@
+@use "../1-variables" as vars;
+
+.msb-validation-indicator {
+  gap: vars.$global-size-200;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 0;
+  padding: 0;
+
+  .rule-item {
+    display: flex;
+    align-items: center;
+    color: vars.$label-caption-color-text-sub;
+    list-style: none;
+    gap: vars.$global-size-200;
+
+    // .valid {
+    //   color: vars.$light-mode-primary-default;
+    // }
+
+    .label {
+      margin: 0;
+      &.invalid {
+        color: vars.$label-caption-color-text-error;
+      }
+    }
+
+    .icon-indicator-default {
+      width: vars.$global-size-150;
+      height: vars.$global-size-150;
+      background-color: vars.$label-caption-color-text-sub;
+      border-radius: 50%;
+    }
+
+    .icon-indicator {
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.succeed::before{
+        color: vars.$label-caption-color-icon-success;
+      }
+
+      &.failed::before {
+
+        color: vars.$label-caption-color-icon-error;
+      }
+    }
+
+  }
+}

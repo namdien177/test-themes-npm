@@ -1,0 +1,88 @@
+@use '../1-variables' as vars;
+
+.msb-avatar {
+  .image {
+    width: vars.$global-size-600;
+    height: vars.$global-size-600;
+    border-radius: vars.$alias-radius-7;
+    box-shadow: vars.$global-shadow-bottom;
+
+    &.md {
+      width: vars.$global-size-800;
+      height: vars.$global-size-800;
+    }
+
+    &.lg {
+      width: vars.$global-size-1000;
+      height: vars.$global-size-1000;
+    }
+  }
+
+  .username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: vars.$global-size-600;
+    height: vars.$global-size-600;
+    background-color: vars.$global-neutral-800;
+    color: vars.$global-neutral-white;
+    border-radius: vars.$alias-radius-7;
+    box-shadow: vars.$global-shadow-bottom;
+    font-size: vars.$small-medium-size;
+
+    &.md {
+      width: vars.$global-size-800;
+      height: vars.$global-size-800;
+      font-size: vars.$base-regular-size;
+    }
+
+    &.lg {
+      width: vars.$global-size-1000;
+      height: vars.$global-size-1000;
+      font-size: vars.$h3-medium-size;
+    }
+  }
+
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: vars.$global-size-600;
+    background-color: vars.$global-neutral-50;
+    padding: vars.$global-size-100;
+    font-size: vars.$small-regular-size;
+    color: vars.$global-neutral-500;
+    font-weight: vars.$small-regular-weight;
+    line-height: vars.$small-regular-line-height;
+    border-radius: vars.$alias-radius-7;
+    box-shadow: vars.$global-shadow-bottom;
+  }
+}
+
+.msb-avatar-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: vars.$global-size-100;
+
+  .avatar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: vars.$global-size-100;
+  }
+}
+
+.overlap {
+  .avatar-container {
+    .avatar-item {
+      overflow: visible;
+      height: inherit;
+      width: calc(#{vars.$global-size-800} - #{vars.$global-size-200});
+    }
+  }
+
+  .avatar-number {
+    margin-left: vars.$global-size-300;
+  }
+}

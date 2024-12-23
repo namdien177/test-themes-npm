@@ -1,0 +1,32 @@
+@use "../1-variables" as vars;
+
+.caption-hint {
+    font-size: vars.$small-regular-size-mb;
+    line-height: vars.$small-regular-line-height-mb;
+    letter-spacing: -0.42px;
+}
+
+.hint-error {
+    @extend .caption-hint !optional;
+    color: vars.$label-caption-color-text-error;
+}
+
+.hint-normal {
+    @extend .caption-hint !optional;
+    color: vars.$label-caption-color-text-sub;
+}
+
+.caption-icon-illustration {
+    & .icon {
+        font-size: vars.$global-size-500;
+    }
+
+    &.succeed::before {
+        color: vars.$label-caption-color-icon-success;
+    }
+
+    &.failed::before {
+
+        color: vars.$label-caption-color-icon-error;
+    }
+}

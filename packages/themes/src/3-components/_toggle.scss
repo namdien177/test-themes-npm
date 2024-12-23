@@ -1,0 +1,36 @@
+@use "../1-variables" as vars;
+
+.msb-toggle {
+  .bb-switch {
+    user-select: none;
+
+    .bb-switch__element {
+      background-color: vars.$toggle-color-surface-default;
+
+      .bb-switch__slider {
+        background-color: vars.$toggle-color-knob-default;
+      }
+    }
+
+    .bb-switch__element--checked {
+      &:not(.bb-switch__element--disabled) {
+        background-color: vars.$toggle-color-surface-select;
+        border-color: vars.$toggle-color-surface-select;
+
+      }
+
+      &.bb-switch__element--disabled {
+        background-color: vars.$toggle-color-surface-disable-select;
+        border-color: vars.$toggle-color-surface-disable-select;
+      }
+    }
+
+    .bb-switch__element--disabled {
+      background-color: vars.$toggle-color-surface-disable;
+      border-color: vars.$toggle-color-surface-disable;
+    }
+
+  }
+
+
+}

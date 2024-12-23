@@ -1,0 +1,41 @@
+@use '../1-variables' as vars;
+
+msb-datepicker.msb-datepicker {
+  display: flex;
+  flex-direction: column;
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .datepicker-toggle-btn {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    width: vars.$alias-icon-medium;
+    height: vars.$alias-icon-medium;
+    display: grid;
+    place-items: center;
+    overflow: visible;
+
+    color: vars.$field-color-icon-default;
+    // TODO: font-size of the icon will be too large if we use vars.$field-size-icon-base directly
+    font-size: vars.$global-size-500;
+  }
+}
+
+.calendar-dropdown-container {
+  border-radius: vars.$alias-radius-4;
+  background-color: vars.$alias-background-white;
+  // similar to selection dropdown - confirmed by designer
+  box-shadow: vars.$global-shadow-bottom;
+  overflow: hidden;
+}

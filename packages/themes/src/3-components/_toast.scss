@@ -1,0 +1,34 @@
+@use '../1-variables' as vars;
+@import 'ngx-toastr/toastr';
+
+.toast-container {
+  .ngx-toastr {
+    display: block;
+    border-radius: vars.$toast-size-boder-radius !important;
+    box-shadow: none !important;
+    width: 358px !important;
+    background-image: none !important;
+    padding: vars.$toast-size-spacing-vertical vars.$toast-size-spacing-horizontal !important;
+  }
+
+  & .toast-message {
+    @extend .base-medium !optional;
+    color: vars.$toast-color-text-default;
+  }
+
+  & .toast-icon {
+    font-size: vars.$global-size-600;
+
+    &::before {
+      color: vars.$toast-color-icon-default;
+    }
+  }
+}
+
+.toast-success {
+  background-color: vars.$toast-color-surface-success !important;
+}
+
+.toast-error {
+  background-color: vars.$toast-color-surface-error !important;
+}

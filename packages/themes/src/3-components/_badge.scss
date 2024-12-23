@@ -1,0 +1,40 @@
+@use '../1-variables' as vars;
+
+msb-badge {
+  // transform: translate(50%, -50%);
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  background-color: vars.$badge-color-surface;
+  border-radius: vars.$badge-size-radius;
+  color: vars.$badge-color-text;
+  height: fit-content;
+
+  span {
+    display: block;
+    text-align: center;
+    align-content: center;
+    padding-right: vars.$badge-size-spacing-horizontal;
+    padding-left: vars.$badge-size-spacing-horizontal;
+    &.large {
+      font-family: vars.$small-medium-font;
+      font-weight: vars.$small-medium-weight;
+      font-size: vars.$small-medium-size;
+      line-height: vars.$small-medium-line-height;
+      letter-spacing: vars.$small-medium-letter-spacing;
+      min-width: vars.$small-medium-line-height;
+    }
+    &.small {
+      font-family: vars.$caption-medium-font;
+      font-weight: vars.$caption-medium-weight;
+      font-size: vars.$caption-medium-size;
+      line-height: vars.$caption-medium-line-height;
+      letter-spacing: vars.$caption-regular-letter-spacing;
+      min-width: vars.$caption-medium-line-height;
+    }
+    &.dot {
+      height: vars.$global-size-200;
+      width: vars.$global-size-200;
+    }
+  }
+}

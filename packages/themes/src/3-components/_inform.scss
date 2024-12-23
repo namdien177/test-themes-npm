@@ -1,0 +1,101 @@
+@use "../1-variables" as vars;
+
+.inform-container {
+    width: 358px;
+    border-width: vars.$inform-size-boder-stroke;
+    border-color: vars.$inform-color-boder-warning;
+    border-style: solid;
+    border-radius: vars.$inform-size-boder-radius;
+    color: vars.$inform-color-text-message;
+    padding: vars.$inform-size-spacing-top vars.$inform-size-spacing-right vars.$inform-size-spacing-bot vars.$inform-size-spacing-left;
+    display: flex;
+    column-gap: vars.$inform-size-spacing-gap;
+    align-items: start;
+    align-content: center;
+    background-color: vars.$inform-color-surface-info;
+}
+
+.content {
+    flex: 1;
+
+    & span {
+        display: block;
+        font-size: vars.$small-regular-size-mb;
+        line-height: vars.$small-regular-line-height-mb;
+        letter-spacing: -0.42px;
+    }
+    
+    & .title {
+        font-size: vars.$base-semibold-size-mb;
+        line-height: vars.$base-semibold-line-height-mb;
+        letter-spacing: -0.42px;
+    }
+}
+
+.inform-icon {
+    font-size: vars.$inform-size-icon-base;
+}
+
+.inform-info {
+    border-color: vars.$inform-color-boder-info;
+    background-color: vars.$inform-color-surface-info;
+
+    & .title,
+    .inform-icon {
+        color: vars.$inform-color-text-info;
+    }
+}
+
+.inform-success {
+    border-color: vars.$inform-color-boder-success;
+    background-color: vars.$inform-color-surface-success;
+
+    & .title,
+    .inform-icon {
+        color: vars.$inform-color-text-success;
+    }
+}
+
+.inform-error {
+    border-color: vars.$inform-color-boder-error;
+    background-color: vars.$inform-color-surface-error;
+
+    & .title,
+    .inform-icon {
+        color: vars.$inform-color-text-error;
+    }
+}
+
+.inform-warning {
+    border-color: vars.$inform-color-boder-warning;
+    background-color: vars.$inform-color-surface-warning;
+
+    & .title,
+    .inform-icon {
+        color: vars.$inform-color-text-warning;
+    }
+}
+
+.inform-close {
+    font-size: vars.$inform-size-icon-base;
+    color: vars.$inform-color-icon-close;
+    cursor: pointer;
+    display: block;
+    outline: none;
+
+    &:hover {
+      color: vars.$button-color-text-neutral-hover;
+    }
+
+    &:focus {
+      color: vars.$button-color-text-neutral-pressed;
+    }
+
+    &:active {
+      color: vars.$button-color-text-neutral-pressed;
+    }
+
+    &:disabled {
+      color: vars.$button-color-text-neutral-disable;
+    }
+}

@@ -1,0 +1,21 @@
+@use '../1-variables' as vars;
+
+.msb-quick-action {
+    box-shadow: 0px 1px 4px 0px rgba(29, 41, 57, 0.15);
+    border-radius: vars.$alias-radius-3;
+    &__item { 
+        width: 100px;
+        min-width: 100px;
+        flex: 1;
+        padding: vars.$alias-spacing-xsmall vars.$alias-spacing-2xsmall;
+        gap: vars.$alias-spacing-3xsmall;
+
+        &-icon {
+            font-size: vars.$alias-icon-large;
+        }
+
+        &-label {
+            color: vars.$alias-text-primary;
+        }
+    }
+}

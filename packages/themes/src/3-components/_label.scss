@@ -1,0 +1,37 @@
+@use "../1-variables" as vars;
+
+.msb-label-container {
+    display: flex;
+    align-items: center;
+    gap: vars.$alias-spacing-2xsmall;
+    justify-content: space-between;
+
+    & .label-content {
+        font-size: vars.$small-medium-size-mb;
+        line-height: vars.$small-regular-line-height-mb;
+        letter-spacing: -0.42px;
+        display: flex;
+        align-items: center;
+
+        & label {
+            color: vars.$label-caption-color-text-main;
+        }
+
+        & .extends {
+            color: vars.$label-caption-color-text-sub;
+            font-style: italic;
+        }
+
+        & i {
+            font-size: vars.$alias-icon-small;
+            color: vars.$label-caption-color-icon-default;
+        }
+    }
+
+    & .label-counting {
+        color: vars.$label-caption-color-text-count;
+        font-size: vars.$small-medium-size-mb;
+        line-height: vars.$small-regular-line-height-mb;
+        letter-spacing: -0.42px;
+    }
+}

@@ -1,0 +1,180 @@
+@use '../1-variables' as vars;
+
+.msb-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: vars.$button-size-boder-radius;
+  min-width: vars.$button-size-base-width-min;
+  width: max-content;
+  height: 100%;
+  border: none;
+  line-height: 0.5rem;
+
+  span {
+    word-break: break-word;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$alias-spacing-2xsmall;
+    min-width: max-content;
+
+    .icon {
+      font-size: 20px;
+    }
+
+    &.sm {
+      padding: vars.$button-size-small-spacing-icon;
+      width: vars.$alias-spacing-xlarge;
+    }
+
+    &.md {
+      padding: vars.$button-size-base-spacing-icon;
+      width: vars.$alias-spacing-2xlarge;
+    }
+
+    &.icon-start {
+      display: flex;
+      gap: vars.$alias-spacing-2xsmall;
+    }
+
+    &.icon-end {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.sm {
+    padding: vars.$button-size-small-spacing-vertical
+      vars.$button-size-small-spacing-horizontal;
+    @extend .base-small-medium !optional;
+
+    .spinner {
+      font-size: 20px;
+    }
+  }
+
+  &.md {
+    padding: vars.$button-size-base-spacing-vertical
+      vars.$button-size-base-spacing-horizontal;
+    @extend .base-medium !optional;
+
+    .spinner {
+      font-size: 24px;
+    }
+  }
+
+  &.primary {
+    background: vars.$button-color-surface-primary-default;
+    color: vars.$button-color-text-primary-default;
+
+    &:hover {
+      background: vars.$button-color-surface-primary-hover;
+    }
+
+    &:focus {
+      background: vars.$button-color-surface-primary-pressed;
+    }
+
+    &:active {
+      background: vars.$button-color-surface-primary-pressed;
+    }
+
+    &:disabled {
+      background: vars.$button-color-surface-primary-disable;
+    }
+  }
+
+  &.secondary {
+    background-color: vars.$button-color-surface-secondary-default;
+    border: vars.$button-size-boder-stroke solid
+      vars.$button-color-boder-secondary-default;
+    color: vars.$button-color-text-secondary-default;
+
+    &:hover {
+      background-color: vars.$button-color-surface-secondary-hover;
+      border-color: vars.$button-color-boder-secondary-hover;
+      color: vars.$button-color-text-secondary-hover;
+    }
+
+    &:focus {
+      background-color: vars.$button-color-surface-secondary-pressed;
+      border-color: vars.$button-color-boder-secondary-pressed;
+      color: vars.$button-color-text-secondary-pressed;
+    }
+
+    &:active {
+      background-color: vars.$button-color-surface-secondary-pressed;
+      border-color: vars.$button-color-boder-secondary-pressed;
+      color: vars.$button-color-text-secondary-pressed;
+    }
+
+    &:disabled {
+      border-color: vars.$button-color-boder-secondary-disable;
+      color: vars.$button-color-text-secondary-disable;
+    }
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    color: vars.$button-color-text-teriary-default;
+
+    &:hover {
+      color: vars.$button-color-text-teriary-hover;
+    }
+
+    &:focus {
+      color: vars.$button-color-text-teriary-pressed;
+    }
+
+    &:active {
+      color: vars.$button-color-text-teriary-pressed;
+    }
+
+    &:disabled {
+      color: vars.$button-color-text-teriary-disable;
+    }
+  }
+
+  &.neutral {
+    background-color: transparent;
+    color: vars.$button-color-text-neutral-default;
+
+    &:hover {
+      color: vars.$button-color-text-neutral-hover;
+    }
+
+    &:focus {
+      color: vars.$button-color-text-neutral-pressed;
+    }
+
+    &:active {
+      color: vars.$button-color-text-neutral-pressed;
+    }
+
+    &:disabled {
+      color: vars.$button-color-text-neutral-disable;
+    }
+  }
+}
+
+/* Spinner styles */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,82 @@
+@use '../1-variables' as vars;
+
+msb-button-group {
+  width: 100%;
+}
+
+.msb-button-group {
+  display: flex;
+
+  &.single {
+    gap: vars.$alias-spacing-small;
+  }
+
+  &.group {
+    .msb-button {
+      border-radius: unset;
+    }
+
+    msb-button:first-child > .msb-button {
+      border-top-left-radius: vars.$alias-radius-7;
+      border-bottom-left-radius: vars.$alias-radius-7;
+    }
+
+    msb-button:last-child > .msb-button {
+      border-top-right-radius: vars.$alias-radius-7;
+      border-bottom-right-radius: vars.$alias-radius-7;
+    }
+
+    msb-button:not(:first-child):not(:last-child) > .msb-button {
+      border-left: unset;
+      border-right: unset;
+    }
+
+    &.stack {
+      msb-button:first-child > .msb-button {
+        border-bottom-left-radius: unset;
+        border-top-right-radius: vars.$alias-radius-7;
+      }
+
+      msb-button:last-child > .msb-button {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: vars.$alias-radius-7;
+      }
+
+      msb-button:not(:first-child):not(:last-child) > .msb-button {
+        border: unset;
+        border-left: vars.$button-size-boder-stroke solid vars.$button-color-boder-secondary-default;
+        border-right: vars.$button-size-boder-stroke solid vars.$button-color-boder-secondary-default;
+      }
+    }
+  }
+
+  &.justify {
+    msb-button {
+      flex: 1;
+
+      .msb-button {
+        width: 100%;
+      }
+    }
+  }
+
+  &.left {
+    justify-content: left;
+  }
+
+  &.right {
+    justify-content: right;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.stack {
+    flex-direction: column;
+
+    .msb-button {
+      width: 100%;
+    }
+  }
+}

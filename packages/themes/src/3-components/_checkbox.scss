@@ -1,0 +1,165 @@
+@use "../1-variables" as vars;
+
+.msb-checkbox {
+  .bb-input-checkbox__input {
+    &:focus + .bb-input-checkbox__content::after {
+      border: none;
+    }
+
+    &:checked ~ .bb-input-checkbox__content-icon::after {
+      font-size: vars.$global-size-400;
+      inset-block-start: calc(50% - 0.85rem);
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+    }
+
+    &:checked + .bb-input-checkbox__content::before {
+      background-color: vars.$global-brand-500;
+      border-color: vars.$global-brand-500;
+
+    }
+
+    &:disabled + .bb-input-checkbox__content::before {
+      border: 1.5px solid vars.$checkbox-color-boder-disable;
+      background-color: vars.$checkbox-color-surface-disable;
+    }
+
+    &:checked:disabled + .bb-input-checkbox__content::before {
+      background-color: vars.$checkbox-color-surface-disable-select;
+      border-color: vars.$checkbox-color-boder-disable;
+    }
+
+    &:checked:disabled ~ .bb-input-checkbox__content-icon::after {
+      color: vars.$checkbox-color-icon-check;
+    }
+
+    &:indeterminate + .bb-input-checkbox__content::before {
+      background-color: unset;
+      border-color: vars.$checkbox-color-boder-Intermidate;
+    }
+
+    &:indeterminate ~ .bb-input-checkbox__content-icon::after {
+      content: '';
+      display: block;
+      border: 1.5px solid vars.$checkbox-color-boder-default;
+      background-color: vars.$global-brand-500;
+      border-color: vars.$global-brand-500;
+      border-radius: vars.$global-size-50;
+      width: 10px;
+      height: 10px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  .bb-input-checkbox__content {
+    padding-inline-start: calc(#{vars.$global-size-500} + 0.5rem);
+    color: vars.$checkbox-color-text-main;
+    font-family: Inter, sans-serif;
+    font-weight: vars.$base-regular-weight;
+    font-size: vars.$base-regular-size-mb;
+    line-height: vars.$base-regular-line-height-mb;
+    letter-spacing: vars.$base-regular-letter-spacing;
+    user-select: none;
+
+    &::before {
+      border: 1.5px solid vars.$checkbox-color-boder-default;
+      border-radius: vars.$checkbox-size-boder-radius;
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+    }
+
+    &::after {
+      // background-color: $alias-boder-focus;
+      width: vars.$global-size-500;
+      height: vars.$global-size-500
+    }
+
+  }
+
+  .description {
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding-inline-start: calc(#{vars.$global-size-500} + 0.5rem);
+    color: vars.$checkbox-color-text-sub;
+  }
+
+  .input-checkbox-neutral {
+    position: relative;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+
+      &:checked ~ .input-checkbox-indeterminate {
+        .input-checkbox-indeterminate-inner {
+          background-color: vars.$global-brand-500;
+          border-color: vars.$global-brand-500;
+        }
+
+        display: flex;
+      }
+    }
+
+    margin-bottom: 0;
+    font-weight: inherit;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &.checked {
+
+      &.disabled {
+        .input-checkbox-indeterminate {
+          border-color: vars.$checkbox-color-boder-disable;
+        }
+      }
+
+      .input-checkbox-normal {
+        display: none;
+      }
+
+      .input-checkbox-indeterminate {
+        display: flex;
+      }
+    }
+
+    .input-checkbox-content {
+      flex: 1;
+      display: inline-block;
+      padding-inline-start: calc(#{vars.$global-size-500} + 0.5rem);
+    }
+
+    .input-checkbox-normal,
+    .input-checkbox-indeterminate {
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+      background-color: #fff;
+      border: 1.5px solid vars.$checkbox-color-boder-default;
+      border-radius: vars.$checkbox-size-boder-radius;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+
+    }
+
+    .input-checkbox-indeterminate {
+      display: none;
+      border: 1.5px solid vars.$checkbox-color-boder-default;
+      align-items: center;
+      justify-content: center;
+      // background-color: $color-primary;
+      .input-checkbox-indeterminate-inner {
+        display: block;
+        border: 1.5px solid vars.$checkbox-color-boder-default;
+        border-radius: vars.$global-size-50;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

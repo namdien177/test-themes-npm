@@ -1,16 +1,43 @@
 /// <reference types='vitest' />
+import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import * as path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import * as path from 'path';
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/themes',
   plugins: [
     nxViteTsPaths(),
-    nxCopyAssetsPlugin(['*.md']),
+    nxCopyAssetsPlugin([
+      '*.md',
+      {
+        input: 'assets',
+        glob: '**/*',
+        output: './assets',
+      },
+      {
+        input: 'src', // look in the project folder
+        glob: 'main.scss', // for the executors.json file
+        output: './', // put the file in the root of the output bundle
+      },
+      {
+        input: 'src/1-variables', // look in the project folder
+        glob: '*.scss', // for the executors.json file
+        output: './1-variables', // put the file in the root of the output bundle
+      },
+      {
+        input: 'src/2-generics', // look in the project folder
+        glob: '*', // for the executors.json file
+        output: './2-generics', // put the file in the root of the output bundle
+      },
+      {
+        input: 'src/3-components', // look in the project folder
+        glob: '*', // for the executors.json file
+        output: './3-components', // put the file in the root of the output bundle
+      },
+    ]),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
@@ -38,7 +65,6 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     cssMinify: true,
-    copyPublicDir: false,
   },
 
   test: {

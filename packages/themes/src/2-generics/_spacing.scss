@@ -1,0 +1,17 @@
+//@import '../1-variables';
+//@import 'breakpoint';
+
+// Margin bottom
+// .mb-32px {
+//   margin-bottom: $sizer-lg;
+// }
+
+// .mb-sm-32px {
+//   @include min-sm() {
+//     margin-bottom: $sizer-lg;
+//   }
+// }
+
+.gap-13px {
+  gap: 13px;
+}

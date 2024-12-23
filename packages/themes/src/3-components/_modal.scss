@@ -1,0 +1,97 @@
+@use '../1-variables' as vars;
+@use '../2-generics/breakpoint' as breakpoint;
+
+.msb-modal-dialog {
+    margin-right: vars.$alias-spacing-large;
+    margin-left: vars.$alias-spacing-large;
+
+    @include breakpoint.min-sm() {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &>.modal-content {
+        max-width: 600px;
+        border-radius: vars.$alias-radius-3;
+        padding: vars.$alias-spacing-small;
+    }
+}
+
+.modal-icon {
+    font-size: vars.$inform-size-icon-base;
+    cursor: pointer;
+    display: block;
+    outline: none;
+}
+
+.msb-modal-header {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$alias-spacing-small;
+
+    & .captions {
+        display: flex;
+
+        & .modal-title {
+            flex: 1;
+            color: vars.$popup-color-text-title;
+            font-size: vars.$title-bold-size-mb;
+            font-weight: 700;
+            line-height: vars.$title-bold-line-height-mb;
+        }
+    }
+
+    & .modal-close {
+        @extend .modal-icon !optional;
+        font-size: vars.$global-size-600;
+        position: relative;
+        content: '';
+        top: 0;
+        right: -5px;
+
+        &:hover {
+            color: vars.$button-color-text-neutral-hover;
+        }
+
+        &:focus {
+            color: vars.$button-color-text-neutral-pressed;
+        }
+
+        &:active {
+            color: vars.$button-color-text-neutral-pressed;
+        }
+
+        &:disabled {
+            color: vars.$button-color-text-neutral-disable;
+        }
+    }
+}
+
+.modal-icon-illustration {
+    @extend .modal-icon !optional;
+    font-size: unset;
+}
+
+.msb-modal-body {
+    padding-top: vars.$alias-spacing-small;
+    padding-bottom: vars.$alias-spacing-2xsmall;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$alias-spacing-small;
+}
+
+.modal-desc {
+    color: vars.$popup-color-text-content;
+    font-size: vars.$base-regular-size-mb;
+    line-height: vars.$base-regular-line-height-mb;
+    letter-spacing: -0.4px;
+}
+
+.modal-sub-desc {
+    @extend .modal-desc !optional;
+    color: vars.$popup-color-text-error-code;
+}
+
+.msb-modal-footer {
+    padding: vars.$alias-spacing-small 0;
+}

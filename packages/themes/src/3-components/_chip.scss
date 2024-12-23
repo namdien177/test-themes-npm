@@ -1,0 +1,130 @@
+@use '../1-variables' as vars;
+@use '../2-generics' as generics;
+
+.msb-chip {
+  display: flex;
+  align-items: center;
+  gap: vars.$global-size-100;
+  padding: vars.$global-size-100 vars.$global-size-200;
+  border-style: solid;
+  border-width: vars.$chip-size-small-boder-stroke;
+  border-color: vars.$chip-color-boder-default;
+  border-radius: vars.$chip-size-small-boder-radius;
+  cursor: pointer;
+
+  color: vars.$chip-color-text-default;
+  background-color: vars.$global-neutral-white;
+
+  font-size: vars.$caption-regular-size;
+  font-weight: vars.$caption-regular-weight;
+  line-height: vars.$caption-regular-line-height;
+  letter-spacing: vars.$caption-regular-letter-spacing;
+  white-space: nowrap;
+  text-align: center;
+
+  .chip-icon {
+    display: grid;
+    place-items: center;
+    width: vars.$global-size-400;
+    height: vars.$global-size-400;
+    font-size: vars.$global-size-400;
+    color: vars.$chip-color-icon-default;
+    overflow: visible;
+  }
+
+  .close-button {
+    display: grid;
+    place-items: center;
+    width: vars.$global-size-400;
+    height: vars.$global-size-400;
+    padding: 0;
+    border: none;
+    border-radius: vars.$global-size-max;
+
+    font-size: vars.$global-size-300;
+    color: vars.$chip-color-icon-default;
+  }
+
+  &.md {
+    border-width: vars.$chip-size-medium-boder-stroke;
+    border-radius: vars.$chip-size-medium-boder-radius;
+
+    font-size: vars.$small-regular-size;
+    font-weight: vars.$small-regular-weight;
+    line-height: vars.$small-regular-line-height;
+    letter-spacing: vars.$small-regular-letter-spacing;
+
+    .chip-icon {
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+      font-size: vars.$global-size-500;
+    }
+
+    .close-button {
+      width: vars.$global-size-500;
+      height: vars.$global-size-500;
+      font-size: vars.$global-size-400;
+    }
+  }
+
+  &.lg {
+    border-width: vars.$chip-size-large-boder-stroke;
+    border-radius: vars.$chip-size-large-boder-radius;
+
+    font-size: vars.$base-regular-size;
+    font-weight: vars.$base-regular-weight;
+    line-height: vars.$base-regular-line-height;
+    letter-spacing: vars.$base-regular-letter-spacing;
+
+    .chip-icon {
+      width: vars.$chip-size-large-icon-base;
+      height: vars.$chip-size-large-icon-base;
+      font-size: vars.$chip-size-large-icon-base;
+    }
+
+    .close-button {
+      width: vars.$chip-size-large-icon-base;
+      height: vars.$chip-size-large-icon-base;
+      font-size: vars.$global-size-500;
+    }
+  }
+
+  &:hover {
+    color: vars.$global-brand-500;
+
+    .chip-icon {
+      color: inherit;
+    }
+
+    .close-button {
+      color: vars.$chip-color-icon-default;
+    }
+  }
+
+  &:active, &.active {
+    color: vars.$global-brand-500;
+    border: vars.$alias-stroke-default solid vars.$global-brand-500;
+    background-color: vars.$global-brand-50;
+
+    .chip-icon {
+      color: inherit;
+    }
+
+    .close-button {
+      color: vars.$chip-color-icon-default;
+    }
+
+    // TODO: check when design update.
+    //line-height: vars.$caption-medium-line-height;
+    //font-size: vars.$caption-medium-size;
+    //font-weight: vars.$base-medium-weight;
+    //letter-spacing: vars.$caption-medium-letter-spacing;
+
+    //.md {
+    //  line-height: vars.$caption-medium-line-height;
+    //  font-size: vars.$caption-medium-size;
+    //  font-weight: vars.$base-medium-weight;
+    //  letter-spacing: vars.$caption-medium-letter-spacing;
+    //}
+  }
+}

@@ -1,0 +1,83 @@
+@use "../1-variables" as vars;
+
+.msb-pin {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+
+  .label-wrapper {
+    flex: 1;
+    .label {
+      color: vars.$alias-text-secondary;
+    }
+    .special-label {
+      font-weight: vars.$typeface-weight-semibold;
+      color: vars.$global-neutral-800;
+    }
+  }
+
+  .resend-otp {
+    display: flex;
+    justify-content: space-between;
+    .resend-otp-label {
+      font-family: vars.$typeface-font-brand;
+      font-size: vars.$small-medium-size-mb;
+      line-height: vars.$small-medium-line-height-mb;
+      letter-spacing: vars.$small-medium-letter-spacing-mb;
+      font-weight: vars.$small-medium-weight-mb;
+    }
+
+    .resend-otp-time {
+      font-family: vars.$typeface-font-brand;
+      font-size: vars.$small-medium-size-mb;
+      line-height: vars.$small-medium-line-height-mb;
+      letter-spacing: vars.$small-medium-letter-spacing-mb;
+      font-weight: vars.$small-medium-weight-mb;
+      color: vars.$alias-text-secondary;
+
+      .time-count {
+        color: vars.$alias-text-primary;
+      }
+    }
+  }
+
+  .pin-wrapper {
+    ngx-otp-input {
+      flex: 1;
+      .ngx-otp-input-form {
+        gap: 20px;
+        display: flex;
+      }
+      .ngx-otp-input-box {
+        width: vars.$global-size-1000;
+        height: vars.$global-size-1000;
+
+        &:focus {
+          border-color: vars.$field-color-boder-typing;
+        }
+      }
+    }
+
+    &.is-disabled {
+      ngx-otp-input {
+        .ngx-otp-input-box {
+          border-color: vars.$field-color-boder-default;
+          background-color: vars.$field-color-surface-disable;
+        }
+      }
+    }
+
+    &.is-error{
+      ngx-otp-input {
+        .ngx-otp-input-box {
+          border-color: vars.$field-color-boder-error;
+        }
+      }
+    }
+  }
+
+  .hint-message{
+    color: vars.$label-caption-color-text-sub;
+  }
+}

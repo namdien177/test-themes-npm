@@ -1,0 +1,124 @@
+@use '../1-variables' as vars;
+
+.msb-stepper {
+  .bb-step__icon {
+    width: vars.$alias-icon-small;
+    height: vars.$alias-icon-small;
+    background-color: vars.$web-stepper-color-surface-default;
+    color: vars.$web-stepper-color-text-main;
+    font-weight: vars.$typeface-weight-medium;
+    font-size: vars.$small-medium-size-mb;
+    line-height: vars.$caption-medium-line-height;
+    letter-spacing: vars.$small-medium-letter-spacing;
+    text-align: center;
+  }
+
+  .bb-stepper {
+    .bb-step {
+      .bb-step__label {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+        color: vars.$web-stepper-color-text-main;
+        font-weight: vars.$typeface-weight-medium;
+        font-size: vars.$base-medium-size-mb;
+        line-height: vars.$base-medium-line-height-mb;
+        letter-spacing: vars.$base-medium-letter-spacing-mb;
+
+        .bb-step__state-label {
+          font-size: vars.$small-regular-size-mb;
+          font-weight: vars.$small-regular-weight;
+          line-height: vars.$small-regular-line-height-mb;
+          letter-spacing: -0.42px;
+          color: vars.$web-stepper-color-text-sub;
+        }
+      }
+    }
+
+    .bb-step--current {
+      .bb-step__label {
+        color: vars.$web-stepper-color-text-in-progress;
+      }
+
+      .bb-step__icon {
+        color: vars.$web-stepper-color-text-in-progress;
+        background-color: vars.$web-stepper-color-surface-in-progress;
+        border-width: vars.$alias-stroke-thick;
+        border-color: vars.$alias-boder-information;
+        border-style: solid;
+      }
+    }
+
+    .bb-step--pending {
+      .bb-step__icon {
+        background-color: transparent;
+        font-size: vars.$web-stepper-size-icon;
+        color: vars.$web-stepper-color-icon-pending;
+      }
+    }
+
+    .bb-step--error {
+      .bb-step__icon {
+        background-color: transparent;
+        font-size: vars.$web-stepper-size-icon;
+        color: vars.$web-stepper-color-icon-error;
+      }
+    }
+
+    .bb-step--checked {
+      .bb-step__icon {
+        background-color: transparent;
+        font-size: vars.$web-stepper-size-icon;
+        color: vars.$web-stepper-color-icon-completed;
+      }
+    }
+  }
+
+  .bb-stepper--horizontal {
+    .bb-stepper {
+      .bb-step {
+        position: relative;
+        gap: vars.$alias-spacing-xsmall;
+
+        .bb-step__label {
+          position: absolute;
+          left: 50%;
+          top: calc(100% + #{vars.$alias-spacing-2xsmall});
+          transform: translate(-50%);
+          width: 135px;
+        }
+      }
+
+      .bb-stepper__separator {
+        margin-top: vars.$alias-spacing-2xsmall;
+        height: vars.$alias-spacing-5xsmall;
+      }
+    }
+  }
+
+  .bb-stepper--vertical {
+    flex-direction: column;
+
+    .bb-stepper {
+      .bb-step {
+        flex-direction: row;
+        gap: vars.$alias-spacing-2xsmall;
+
+        .bb-step__label {
+          text-align: left;
+          top: -(vars.$alias-spacing-5xsmall);
+
+          .bb-step__state-label {
+            padding-top: 0;
+          }
+        }
+
+        &::before {
+          top: calc(1.5rem - #{vars.$global-size-25});
+          left: calc(0.75rem - #{vars.$alias-spacing-5xsmall});
+        }
+      }
+    }
+  }
+}

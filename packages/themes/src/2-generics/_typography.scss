@@ -1,0 +1,251 @@
+@use './breakpoint' as bp;
+
+.heading-1 {
+  font-size: 32px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -1.28px;
+  line-height: 40px;
+
+  @include bp.min-lg() {
+    font-size: 48px;
+    letter-spacing: -1.92px;
+    line-height: 56px;
+  }
+}
+
+.heading-1-bold {
+  @extend .heading-1 !optional;
+  font-weight: 700;
+  letter-spacing: -0.64px;
+}
+
+.heading-2 {
+  font-size: 26px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -1.04px;
+  line-height: 36px;
+
+  @include bp.min-lg() {
+    font-size: 40px;
+    letter-spacing: -1.6px;
+    line-height: 48px;
+  }
+}
+
+.heading-2-semi-bold {
+  @extend .heading-2 !optional;
+  font-weight: 600;
+  letter-spacing: -1.04px;
+}
+
+.heading-2-bold {
+  @extend .heading-2 !optional;
+  font-weight: 700;
+  letter-spacing: -0.52px;
+}
+
+.heading-3 {
+  font-size: 22px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.88px;
+  line-height: 32px;
+
+  @include bp.min-lg() {
+    font-size: 24px;
+    letter-spacing: -1.28px;
+    line-height: 36px;
+  }
+}
+
+.heading-3-semi-bold {
+  @extend .heading-3 !optional;
+  font-weight: 600;
+  letter-spacing: -0.88px;
+}
+
+.heading-3-bold {
+  @extend .heading-3 !optional;
+  font-weight: 700;
+  letter-spacing: -0.66px;
+}
+
+.heading-4 {
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  line-height: 28px;
+
+  @include bp.min-lg() {
+    font-size: 22px;
+    letter-spacing: -0.96px;
+    line-height: 32px;
+  }
+}
+
+.heading-4-semi-bold {
+  @extend .heading-4 !optional;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.heading-4-bold {
+  @extend .heading-4 !optional;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.title-medium {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.27px;
+  line-height: 24px;
+
+  @include bp.min-lg() {
+    font-size: 20px;
+    letter-spacing: -0.27px;
+    line-height: 28px;
+  }
+}
+
+.title-semi-bold {
+  @extend .title-medium !optional;
+  font-weight: 600;
+  letter-spacing: -0.27px;
+}
+
+.title-bold {
+  @extend .title-medium !optional;
+  font-weight: 700;
+  letter-spacing: -0.27px;
+}
+
+.base-medium {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  line-height: 24px;
+
+  @include bp.min-lg() {
+    font-size: 17px;
+    letter-spacing: -0.32px;
+    line-height: 24px;
+  }
+}
+
+.base-medium-semi-bold {
+  @extend .base-medium !optional;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}
+
+.base-medium-bold {
+  @extend .base-medium !optional;
+  font-weight: 700;
+  letter-spacing: -0.27px;
+}
+
+.base-regular {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 24px;
+
+  @include bp.min-lg() {
+    font-size: 17px;
+    letter-spacing: -0.4px;
+    line-height: 28px;
+  }
+}
+
+.base-small-semi-bold {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  line-height: 20px;
+
+  @include bp.min-lg() {
+    font-size: 15px;
+    letter-spacing: -0.28px;
+    line-height: 24px;
+  }
+}
+
+.base-small-medium {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  line-height: 20px;
+
+  @include bp.min-lg() {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+    line-height: 20px;
+  }
+}
+
+.base-small-regular {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+  line-height: 20px;
+
+  @include bp.min-lg() {
+    font-size: 15px;
+    letter-spacing: -0.42px;
+    line-height: 20px;
+  }
+}
+
+.caption-medium {
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: 16px;
+
+  @include bp.min-lg() {
+    font-size: 12px;
+    letter-spacing: -0.36px;
+    line-height: 20px;
+  }
+}
+
+.caption-regular {
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  line-height: 16px;
+
+  @include bp.min-lg() {
+    font-size: 13px;
+    letter-spacing: -0.36px;
+    line-height: 20px;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}

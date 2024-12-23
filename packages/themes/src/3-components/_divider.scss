@@ -1,0 +1,8 @@
+@use '../1-variables' as vars;
+
+.divider {
+    height: vars.$alias-stroke-default;
+    width: 100%;
+    background-color: vars.$alias-boder-default;
+  }
+  

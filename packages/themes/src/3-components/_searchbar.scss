@@ -1,0 +1,104 @@
+@use "../1-variables" as vars;
+
+.msb-searchbar {
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: vars.$global-size-100;
+
+  .searchbar-label {
+    margin: 0;
+  }
+
+  .searchbar-wrapper {
+    border: 1px solid vars.$field-color-boder-default;
+    border-radius: vars.$field-size-boder-radius;
+    padding: vars.$global-size-200 vars.$global-size-300;
+    display: flex;
+    align-items: center;
+    gap: vars.$global-size-300;
+    height: 40px;
+    // justify-content: space-between;
+
+    &.is-error {
+      border-color: vars.$field-color-boder-error;
+    }
+
+    &:hover {
+
+      &:not(:focus-within) {
+        border-color: vars.$field-color-boder-default;
+        background-color: vars.$global-neutral-50;
+      }
+    }
+
+    &:focus-within {
+      border-color: vars.$field-color-boder-hover
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+    }
+    .searchbar-search-icon {
+      user-select: none;
+      font-size: 17.5px;
+      display: inline-block;
+      padding: 3.25px;
+      &::before {
+        color: vars.$field-color-icon-default;
+      }
+    }
+
+    .searchbar-error-icon {
+      user-select: none;
+      font-size: vars.$global-size-500;
+      display: inline-block;
+      padding: 3.25px;
+      &::before {
+        color: vars.$alias-icon-error;
+      }
+    }
+
+    .searchbar-close-icon {
+      cursor: pointer;
+      font-size: vars.$global-size-500;
+      display: inline-block;
+      &::before {
+        color: vars.$field-color-icon-clear;
+      }
+    }
+  }
+
+  input, textarea{
+    // width: 300px;
+    max-height: 112px;
+    border: none;
+    box-shadow: none; // Remove any shadow
+    outline: none;
+    background-color: transparent; // Ensure background is transparent
+
+    font-size: vars.$h4-semibold-size-mb;
+  }
+
+  input::before,
+  input::after {
+    content: none; // Remove any pseudo-elements
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: vars.$field-color-text-placeholder;
+    font-size: vars.$base-regular-size-mb;
+  }
+
+
+  //TODO: update token for letter spacing of small/regular/letter-spacing right now in the design, the data is -0.42px
+  .hint-message {
+    font-size: vars.$small-regular-size-mb;
+    font-weight: vars.$small-regular-weight;
+    line-height: vars.$small-regular-line-height-mb;
+    // letter-spacing: vars.$small-regular-letter-spacing;
+    letter-spacing: -0.42px;
+    color: vars.$label-caption-color-text-sub;
+  }
+}

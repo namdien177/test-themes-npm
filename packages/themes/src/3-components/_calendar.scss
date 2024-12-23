@@ -1,0 +1,290 @@
+@use '../1-variables' as vars;
+
+.msb-datepicker, // allow msb-datepicker to inherit from msb-calendar
+.msb-calendar {
+  border-radius: vars.$global-size-400;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: vars.$global-size-200;
+  //min-width: 20rem;
+  border-color: transparent;
+  background-color: vars.$alias-background-white;
+
+  .ngb-dp-header {
+    padding: 0;
+  }
+
+  .ngb-dp-content {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$global-size-200;
+    padding-top: vars.$global-size-300;
+    padding-bottom: vars.$global-size-300;
+  }
+
+  .calendar-content {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$global-size-50;
+    padding-left: vars.$global-size-200;
+    padding-right: vars.$global-size-200;
+    background-color: vars.$alias-surface-white;
+    transition: all 0.3s ease-in-out;
+
+    > ngb-datepicker-month {
+      display: flex;
+      flex-direction: column;
+      gap: vars.$global-size-50;
+    }
+
+    > * {
+      min-width: calc(7 * #{vars.$global-size-1000});
+    }
+  }
+
+  .calendar-cell {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: vars.$global-size-1000;
+    min-height: vars.$global-size-1000;
+    background-color: vars.$alias-background-white;
+    border-radius: vars.$alias-radius-1;
+
+    color: vars.$alias-text-primary;
+    font-size: vars.$small-regular-size;
+    font-family: vars.$small-regular-font, sans-serif;
+    font-weight: vars.$small-regular-weight;
+    line-height: vars.$small-regular-line-height;
+    letter-spacing: vars.$small-regular-letter-spacing;
+    transition: all 0.1s ease;
+    text-align: center;
+    word-wrap: break-word;
+    user-select: none;
+
+    &:hover {
+      background-color: vars.$alias-surface-selection-item-hover;
+    }
+
+    &.is-present {
+      color: vars.$alias-text-brand;
+
+      > .indicator-anchor {
+        &::after {
+          content: '';
+          display: block;
+          width: 1rem;
+          height: 3px;
+          border-radius: vars.$global-size-max;
+          background-color: vars.$alias-text-brand;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &.hidden,
+    &.disabled {
+      color: vars.$alias-text-disable;
+    }
+
+    // TODO: check if this is needed
+    //&.focused,
+    //&:focus-visible,
+    &.selected {
+      background-color: vars.$alias-surface-brand;
+      color: vars.$alias-text-inverse;
+
+      > .indicator-anchor::after {
+        background-color: vars.$alias-icon-inverse;
+      }
+    }
+
+    > .cell-text {
+      display: grid;
+      place-items: center;
+    }
+
+    .indicator-anchor {
+      position: relative;
+    }
+
+    &.week-day {
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  }
+
+  .day-cell {
+    padding: vars.$global-size-200 vars.$global-size-100;
+
+    .day-events {
+      display: flex;
+      justify-content: center;
+      gap: vars.$global-size-50;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .event-pill {
+        display: block;
+        width: 7px;
+        height: 3px;
+        border-radius: vars.$global-size-max;
+
+        &:first-child {
+          background-color: vars.$global-green-500;
+        }
+
+        &:nth-child(2) {
+          background-color: vars.$global-blue-500;
+        }
+      }
+    }
+  }
+
+  .ngb-dp-week {
+    display: grid;
+    grid-template-columns: repeat(7, vars.$global-size-1000);
+    justify-items: center;
+    row-gap: vars.$global-size-50;
+    min-height: vars.$global-size-1000;
+
+    .ngb-dp-day {
+      width: vars.$global-size-1000;
+      height: vars.$global-size-1000;
+      user-select: none;
+    }
+  }
+
+  .ngb-dp-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, vars.$global-size-1000);
+    justify-items: center;
+    min-height: vars.$global-size-1000;
+
+    .day-cell {
+      color: vars.$alias-text-secondary;
+
+      &.sunday {
+        color: vars.$alias-text-error;
+      }
+    }
+  }
+
+  .msb-dp-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: vars.$alias-spacing-2xsmall;
+    gap: vars.$alias-spacing-2xsmall;
+    border-bottom: vars.$alias-stroke-default solid vars.$alias-boder-default;
+
+    button.navigation-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: vars.$global-size-200;
+      height: vars.$global-size-600;
+
+      border: none;
+      background-color: transparent;
+      outline: 0;
+
+      color: vars.$alias-text-primary;
+      font-size: vars.$title-semibold-size;
+      font-weight: vars.$title-semibold-weight;
+      font-family: vars.$title-semibold-font;
+      line-height: vars.$title-semibold-line-height;
+      letter-spacing: vars.$title-semibold-letter-spacing;
+      white-space: nowrap;
+
+      i {
+        font-size: vars.$global-size-500;
+        color: vars.$alias-icon-default;
+      }
+
+      &.change-content {
+        width: vars.$global-size-600;
+        height: vars.$global-size-600;
+        font-size: vars.$alias-icon-medium;
+      }
+    }
+  }
+
+  .custom-view-mode {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(vars.$global-size-1000, 1fr));
+    row-gap: vars.$global-size-400;
+    /**
+      TODO: inconsistency with the global variables
+      Currently the container width isn't consistent between designs.
+      some designs have 320px, some have 296px with minors differences.
+     */
+    column-gap: 5px;
+    padding-top: vars.$global-size-200;
+    padding-bottom: vars.$global-size-100;
+
+    .view-mode-cell {
+      display: grid;
+      place-items: center;
+      border-radius: vars.$alias-radius-1;
+      padding: vars.$global-size-50 vars.$global-size-100;
+      min-height: vars.$global-size-1000;
+
+      cursor: pointer;
+      border: vars.$alias-stroke-default solid transparent;
+    }
+  }
+
+  &.calendar-range {
+    .ngb-dp-content {
+      flex-direction: row;
+      gap: 0;
+
+      .range-unit {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:first-child) {
+          border-left: vars.$alias-stroke-default solid vars.$alias-boder-default;
+        }
+
+        .calendar-cell {
+          &.in-range {
+            border-radius: 0;
+            background-color: vars.$alias-surface-selection-item-selected;
+            color: vars.$alias-text-brand;
+          }
+
+          &.range-start,
+          &.range-end {
+            background-color: vars.$alias-surface-brand;
+            color: vars.$alias-text-inverse;
+
+            > .indicator-anchor {
+              &::after {
+                background-color: vars.$alias-icon-inverse;
+              }
+            }
+          }
+
+          &.range-start {
+            border-radius: vars.$alias-radius-1 0 0 vars.$alias-radius-1;
+          }
+
+          &.range-end {
+            border-radius: 0 vars.$alias-radius-1 vars.$alias-radius-1 0;
+          }
+        }
+      }
+    }
+  }
+}

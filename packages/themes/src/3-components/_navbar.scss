@@ -1,0 +1,202 @@
+@use '../1-variables' as *;
+
+.msb-navbar {
+  min-height: 100dvh;
+  max-height: 100dvh;
+  overflow-x: hidden;
+
+  &.expanded {
+
+    .mat-drawer-backdrop {
+      left: 254px;
+      opacity: 1;
+      transition: all 300ms ease-out;
+    }
+
+    .msb-sidenav {
+      width: 254px;
+      transition: width 500ms ease-out;
+    }
+  }
+
+  &.collapsed {
+
+    .mat-drawer-backdrop {
+      opacity: 0;
+      transition: opacity 300ms ease-in;
+    }
+
+    .msb-sidenav {
+      width: 76px; //76px + 8px of scrollbar
+      transition: width 300ms ease-in;
+
+      .msb-sidenav-header__icon {
+        position: fixed;
+        right: -18px;
+      }
+
+      a {
+        padding: 10px;
+      }
+    }
+  }
+
+  &-icon {
+    color: $nav-color-icon-default;
+    font-size: $nav-size-icon-base;
+  }
+
+  .mat-drawer[style*="visibility: hidden"] {
+    display: block;
+  }
+
+  .msb-sidenav {
+    visibility: visible !important;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    overflow: unset;
+
+    &.mat-drawer-side {
+      border: unset;
+    }
+
+    .mat-drawer-inner-container {
+      overflow: hidden;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      padding: $alias-spacing-small $alias-spacing-large;
+
+      &__logo {
+        flex: 1;
+      }
+
+      &__icon {
+        position: absolute;
+        right: $alias-spacing-none;
+        display: flex;
+      }
+    }
+
+    &-body {
+      padding: $alias-spacing-small;
+      max-height: calc(100vh - 60px); //60px is height of header
+      &__accordion {
+        .mat-expansion-panel {
+          box-shadow: none;
+
+          &.mat-expansion-panel-spacing {
+            margin: $alias-spacing-none;
+          }
+
+          .mat-expansion-panel-header {
+            padding: $alias-spacing-none;
+
+            .mat-content {
+              display: flex;
+              align-items: center;
+
+              &.mat-content-hide-toggle {
+                margin-right: $alias-spacing-none;
+              }
+
+              .mat-expansion-panel-header-title {
+                display: block;
+                margin-right: $alias-spacing-none;
+                overflow: hidden;
+
+                .msb-navbar-text {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  padding: $nav-size-spacing-web-vertical $nav-size-spacing-web-horizontal;
+                }
+              }
+            }
+          }
+
+          .mat-expansion-panel-content {
+
+            .mat-expansion-panel-body {
+              padding: $alias-spacing-none;
+
+              .mat-mdc-nav-list {
+                &.mdc-list {
+                  padding: $alias-spacing-none;
+                }
+
+                .level-3 {
+                  padding-left: $alias-spacing-2xlarge;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      @extend .base-small-semi-bold !optional;
+      padding: $nav-size-spacing-web-vertical $nav-size-spacing-web-horizontal;
+      width: 100%;
+      color: $nav-color-text-default;
+
+      &.active {
+        border-radius: $nav-size-boder-radius;
+        border: $nav-size-boder-stroke solid $nav-color-boder-select;
+        background: $nav-color-surface-select;
+
+        span {
+          color: $nav-color-text-select;
+        }
+      }
+
+      &:hover {
+        background-color: $nav-color-surface-hover;
+        border-radius: $nav-size-boder-radius;
+        cursor: pointer;
+
+        span {
+          color: $nav-color-text-hover;
+        }
+      }
+    }
+
+    a, span {
+      display: flex;
+      align-items: center;
+      gap: $nav-size-spacing-app-gap;
+    }
+
+    span {
+      white-space: normal;
+    }
+  }
+
+  .mat-drawer-content {}
+
+  .navbar-tooltip {
+    button {
+      margin-left: $alias-spacing-none !important;
+      width: 100%;
+    }
+
+    .tooltip  {
+      position: fixed !important;
+      left: 8px !important;
+
+      .tooltip-inner {
+        min-width: max-content;
+        text-align: left;
+      }
+    }
+  }
+
+  .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba(0,0,0,0.5);
+  }
+}

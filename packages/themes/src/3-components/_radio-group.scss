@@ -1,0 +1,76 @@
+@use "../1-variables" as vars;
+
+.msb-radio {
+  .bb-input-radio-group__radio {
+    &:before {
+      inset-block-start: unset;
+      transform: unset;
+      width: 20px;
+      height: 20px;
+      border: 1.6px solid vars.$radio-color-boder-default;
+      top: 4px;
+    }
+
+    &:after {
+      inset-block-start: unset;
+      transform: unset;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+    }
+
+    &.focus {
+      &::before {
+        outline: unset;
+        outline-offset: unset;
+        box-shadow: unset;
+      }
+    }
+
+    &.selected:not(:disabled):not(.disabled) {
+      &::after {
+        color: vars.$radio-color-icon-select;
+        background-color: vars.$radio-color-icon-select;
+      }
+
+      &::before {
+        border-color: vars.$radio-color-boder-select;
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      &::before {
+        background-color: unset;
+      }
+    }
+
+    &.selected.disabled,
+    &.selected:disabled {
+      &::before {
+        background-color: vars.$radio-color-surface-disable;
+        border-color: vars.$radio-color-boder-disable;
+      }
+
+      &::after {
+        background-color: vars.$radio-color-icon-disable;
+      }
+    }
+
+    .label,.description, .error-message {
+      margin: 0;
+    }
+
+    .label {
+      color: vars.$radio-color-text-main;
+    }
+
+    .description {
+      color: vars.$radio-color-text-sub;
+    }
+
+    .error-message {
+      color: vars.$radio-color-text-error
+    }
+  }
+}

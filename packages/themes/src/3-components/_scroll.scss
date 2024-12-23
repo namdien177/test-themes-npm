@@ -1,0 +1,52 @@
+@use '../1-variables' as vars;
+
+.msb-scroll {
+  overflow: auto;
+  
+  &.hide-scrollbar {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: vars.$global-size-200;
+    height: vars.$global-size-200;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: vars.$global-neutral-100;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: vars.$global-neutral-200;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    border-radius: vars.$global-size-700;
+  }
+
+  &-sm {
+    @extend .msb-scroll !optional;
+
+    &::-webkit-scrollbar {
+      width: vars.$global-size-100;
+      height: vars.$global-size-100;
+    }
+  }
+}

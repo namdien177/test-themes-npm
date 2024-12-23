@@ -1,0 +1,44 @@
+@use '../1-variables' as vars;
+
+.msb-tag {
+  display: flex;
+  align-items: center;
+  padding: vars.$global-size-50 vars.$global-size-200;
+  border-radius: vars.$tag-size-boder-radius;
+
+  color: vars.$tag-color-text-black;
+  background-color: vars.$tag-color-surface-black;
+  font-size: vars.$caption-medium-size;
+  font-weight: vars.$caption-medium-weight;
+  line-height: vars.$caption-medium-line-height;
+  letter-spacing: vars.$caption-medium-letter-spacing;
+  white-space: nowrap;
+  text-align: center;
+
+  &.lg {
+    font-size: vars.$small-medium-size;
+    font-weight: vars.$small-medium-weight;
+    line-height: vars.$small-medium-line-height;
+    letter-spacing: vars.$small-medium-letter-spacing;
+  }
+
+  &.blue {
+    color: vars.$tag-color-text-blue;
+    background-color: vars.$tag-color-surface-blue;
+  }
+
+  &.green {
+    color: vars.$tag-color-text-green;
+    background-color: vars.$tag-color-surface-green;
+  }
+
+  &.red {
+    color: vars.$tag-color-text-red;
+    background-color: vars.$tag-color-surface-red;
+  }
+
+  &.yellow {
+    color: vars.$tag-color-text-yellow;
+    background-color: vars.$tag-color-surface-yellow;
+  }
+}
