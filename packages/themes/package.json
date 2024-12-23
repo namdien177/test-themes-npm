@@ -1,6 +1,6 @@
 {
   "name": "namdh3-themes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "dependencies": {},
   "type": "module",
   "main": "./index.js",
