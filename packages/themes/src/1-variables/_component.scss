@@ -1,0 +1,517 @@
+@import 'global';
+@import 'alias';
+
+$button-color-surface-primary-default: linear-gradient(324.32deg, #e45f35 20.9%, #ffa95a 110.29%);
+$button-color-surface-primary-hover: $global-brand-500;
+$button-color-surface-primary-pressed: $global-brand-700;
+$button-color-surface-primary-disable: $alias-surface-disable;
+$button-color-surface-secondary-default: $alias-surface-white;
+$button-color-surface-secondary-hover: $alias-surface-white;
+$button-color-surface-secondary-pressed: $alias-surface-white;
+$button-color-surface-secondary-disable: $alias-surface-white;
+
+$button-color-text-primary-default: $alias-text-inverse;
+$button-color-text-primary-hover: $alias-text-inverse;
+$button-color-text-primary-pressed: $alias-text-inverse;
+$button-color-text-primary-disable: $alias-text-inverse;
+$button-color-text-secondary-default: $alias-text-brand;
+$button-color-text-secondary-hover: $alias-text-brand-hover;
+$button-color-text-secondary-pressed: $alias-text-brand-pressed;
+$button-color-text-secondary-disable: $alias-text-disable;
+$button-color-text-teriary-default: $alias-text-brand;
+$button-color-text-teriary-hover: $alias-text-brand;
+$button-color-text-teriary-pressed: $alias-text-brand-pressed;
+$button-color-text-teriary-disable: $alias-text-disable;
+$button-color-text-neutral-default: $alias-text-primary;
+$button-color-text-neutral-hover: $alias-text-brand-hover;
+$button-color-text-neutral-pressed: $alias-text-brand-pressed;
+$button-color-text-neutral-disable: $alias-text-disable;
+
+$button-color-boder-secondary-default: $alias-boder-brand;
+$button-color-boder-secondary-hover: $global-brand-300;
+$button-color-boder-secondary-pressed: $global-brand-700;
+$button-color-boder-secondary-disable: $alias-boder-disable;
+
+$button-color-icon-primary-default: $alias-icon-inverse;
+$button-color-icon-primary-hover: $alias-icon-inverse;
+$button-color-icon-primary-pressed: $alias-icon-inverse;
+$button-color-icon-primary-disable: $alias-icon-inverse;
+$button-color-icon-secondary-default: $alias-icon-brand;
+$button-color-icon-secondary-hover: $global-brand-300;
+$button-color-icon-secondary-pressed: $global-brand-700;
+$button-color-icon-secondary-disable: $alias-icon-disable;
+$button-color-icon-teriary-default: $global-brand-500;
+$button-color-icon-teriary-hover: $global-brand-300;
+$button-color-icon-teriary-pressed: $global-brand-700;
+$button-color-icon-teriary-disable: $alias-icon-disable;
+$button-color-icon-neutral-default: $global-neutral-800;
+$button-color-icon-neutral-hover: $global-brand-500;
+$button-color-icon-neutral-pressed: $global-brand-700;
+$button-color-icon-neutral-disable: $global-neutral-200;
+
+$button-size-icon-base: $alias-icon-medium;
+$button-size-icon-small: $alias-icon-small;
+
+$button-size-boder-radius: $alias-radius-2;
+$button-size-boder-stroke: $alias-stroke-default;
+
+$button-size-small-width-min: $global-size-2400;
+$button-size-small-height-max: $global-size-800;
+$button-size-small-spacing-vertical: $alias-spacing-3xsmall;
+$button-size-small-spacing-horizontal: $alias-spacing-xsmall;
+$button-size-small-spacing-gap: $alias-spacing-2xsmall;
+$button-size-small-spacing-icon: $alias-spacing-3xsmall;
+
+$button-size-base-spacing-vertical: $alias-spacing-2xsmall;
+$button-size-base-spacing-horizontal: $alias-spacing-xsmall;
+$button-size-base-spacing-gap: $alias-spacing-2xsmall;
+$button-size-base-spacing-icon: $alias-spacing-2xsmall;
+$button-size-base-height-max: $global-size-1000;
+$button-size-base-width-min: $global-size-2400;
+
+
+$field-color-surface-default: $alias-surface-white;
+$field-color-surface-view-only: $global-neutral-100;
+$field-color-surface-disable: $global-neutral-100;
+
+$field-color-icon-default: $alias-icon-default;
+$field-color-icon-disable: $alias-icon-disable;
+$field-color-icon-clear: $global-neutral-300;
+
+$field-color-boder-default: $alias-boder-default;
+$field-color-boder-hover: $alias-boder-hover;
+$field-color-boder-typing: $alias-boder-focus;
+$field-color-boder-error: $alias-boder-error;
+
+$field-color-boder-cursor: $global-neutral-800;
+
+$field-color-text-currency: $alias-text-secondary;
+$field-color-text-filled: $alias-text-primary;
+$field-color-text-placeholder: $alias-text-placeholder;
+$field-color-text-disable: $alias-text-disable;
+
+$field-size-min-height: $alias-spacing-2xlarge;
+$field-size-base-height: $alias-spacing-3xlarge;
+$field-size-large-height: $alias-spacing-4xlarge;
+
+$field-size-spacing-vertical: $alias-spacing-2xsmall;
+$field-size-spacing-horizontal: $alias-spacing-xsmall;
+$field-size-spacing-gap: $alias-spacing-xsmall;
+
+
+$field-size-boder-radius: $alias-radius-2;
+$field-size-boder-stroke: $alias-stroke-default;
+
+$field-size-icon-base: $alias-icon-medium;
+$field-size-icon-max: $alias-icon-large;
+
+$label-caption-color-text-main: $alias-text-primary;
+$label-caption-color-text-sub: $alias-text-secondary;
+$label-caption-color-text-count: $alias-text-secondary;
+$label-caption-color-text-error: $alias-text-error;
+$label-caption-color-icon-default: $alias-icon-default;
+$label-caption-color-icon-error: $alias-icon-error;
+$label-caption-color-icon-success: $alias-icon-success;
+
+$label-caption-size-icon: $alias-icon-small;
+$label-caption-size-gap: $alias-spacing-2xsmall;
+
+$tab-color-surface-default: $alias-surface-white;
+$tab-color-surface-hover: $alias-surface-white;
+$tab-color-surface-active: $alias-surface-selection-item-hover;
+
+$tab-color-text-default: $alias-text-primary;
+$tab-color-text-hover: $alias-text-brand;
+$tab-color-text-active: $alias-text-brand;
+$tab-color-text-disable: $alias-text-disable;
+
+$tab-color-boder-default-app: $alias-boder-default;
+$tab-color-boder-default-web: $global-neutral-300;
+$tab-color-boder-hover: $alias-boder-default;
+$tab-color-boder-active: $alias-boder-focus;
+$tab-color-boder-disable: $alias-boder-disable;
+
+$tab-color-icon-default: $alias-icon-default;
+$tab-color-icon-hover: $alias-icon-brand;
+$tab-color-icon-active: $alias-icon-brand;
+$tab-color-icon-disable: $alias-icon-disable;
+
+$tab-size-small-spacing-vertical: $alias-spacing-4xsmall;
+$tab-size-small-spacing-horizontal: $alias-spacing-xsmall;
+$tab-size-small-icon-base: $alias-icon-small;
+$tab-size-small-boder-radius: $alias-radius-7;
+$tab-size-small-boder-stroke: $alias-stroke-default;
+
+
+$tab-size-base-icon-base: $alias-icon-medium;
+$tab-size-base-spacing-vertical: $alias-spacing-3xsmall;
+$tab-size-base-spacing-horizontal: $alias-spacing-small;
+$tab-size-base-boder-radius: $alias-radius-7;
+$tab-size-base-boder-stroke: $alias-stroke-default;
+
+$header-color-surface-lever-1: $alias-surface-white;
+
+$header-color-text-default: $alias-text-primary;
+
+$header-color-icon-action: $alias-icon-brand;
+$header-color-icon-default: $global-neutral-800;
+
+$header-size-icon-base: $alias-icon-medium;
+
+$header-size-spacing-vertical: $alias-spacing-small;
+$header-size-spacing-horizontal: $alias-spacing-small;
+
+
+
+$carousel-color-dot-default: $global-neutral-200;
+$carousel-color-dot-select: $global-brand-500;
+
+$carousel-color-divider-default: $alias-boder-default;
+
+$carousel-size-spacing-vertical: $alias-spacing-small;
+$carousel-size-spacing-horizontal: $alias-spacing-small;
+$carousel-size-spacing-gap: $alias-spacing-2xsmall;
+
+
+$carousel-size-divider-stroke: $alias-stroke-default;
+
+$bottomsheet-color-text-title: $alias-text-primary;
+
+$bottomsheet-color-surface-default: $alias-surface-white;
+
+$bottomsheet-color-icon-default: $global-neutral-800;
+
+$bottomsheet-color-boder-default: $alias-boder-default;
+$bottomsheet-color-boder-drag-handle: $global-neutral-500;
+
+$bottomsheet-size-icon-base: $alias-icon-medium;
+
+$bottomsheet-size-boder-radius: $alias-radius-4;
+$bottomsheet-size-boder-stroke: $alias-stroke-default;
+
+$card-color-surface-default: $alias-surface-white;
+
+$card-color-text-title: $alias-text-primary;
+$card-color-text-subtitle: $alias-text-secondary;
+$card-color-text-content: $alias-text-primary;
+
+$card-color-icon-default: $global-neutral-800;
+$card-color-icon-direction: $alias-icon-brand;
+
+$card-color-boder-divider: $alias-boder-default;
+
+$card-size-icon-base: $alias-icon-medium;
+
+$card-size-boder-radius: $alias-radius-3;
+$card-size-boder-stroke: $alias-stroke-default;
+
+$card-size-spacing-bot: $alias-spacing-small;
+$card-size-spacing-top: $alias-spacing-small;
+$card-size-spacing-right: $alias-spacing-small;
+$card-size-spacing-left: $alias-spacing-small;
+
+$dataview-color-text-main: $alias-text-primary;
+$dataview-color-text-sub: $alias-text-secondary;
+$dataview-color-text-currency: $alias-text-secondary;
+$dataview-color-text-time: $alias-text-inverse;
+$dataview-color-text-percent: $alias-text-secondary;
+
+$dataview-color-icon-default: $alias-icon-default;
+
+$dataview-size-spacing-top: $alias-spacing-4xsmall;
+$dataview-size-spacing-bot: $alias-spacing-4xsmall;
+$dataview-size-spacing-gap: $alias-spacing-large;
+
+$inform-color-surface-info: $alias-surface-information;
+$inform-color-surface-success: $alias-surface-success;
+$inform-color-surface-error: $alias-surface-error;
+$inform-color-surface-warning: $alias-surface-warning;
+
+$inform-color-text-message: $alias-text-primary;
+$inform-color-text-warning: $alias-text-warning;
+$inform-color-text-error: $alias-text-error;
+$inform-color-text-success: $alias-text-success;
+$inform-color-text-info: $alias-text-information;
+
+$inform-color-icon-warning: $alias-icon-warning;
+$inform-color-icon-error: $alias-icon-error;
+$inform-color-icon-success: $alias-icon-success;
+$inform-color-icon-info: $alias-icon-information;
+$inform-color-icon-close: $alias-icon-default;
+
+$inform-color-boder-warning: $alias-boder-warning;
+$inform-color-boder-error: $alias-boder-error;
+$inform-color-boder-success: $alias-boder-success;
+$inform-color-boder-info: $alias-boder-information;
+
+$inform-size-icon-base: $alias-icon-medium;
+
+$inform-size-boder-radius: $alias-radius-2;
+$inform-size-boder-stroke: $alias-stroke-default;
+
+$inform-size-spacing-right: $alias-spacing-xsmall;
+$inform-size-spacing-left: $alias-spacing-xsmall;
+$inform-size-spacing-bot: $alias-spacing-2xsmall;
+$inform-size-spacing-top: $alias-spacing-2xsmall;
+$inform-size-spacing-gap: $alias-spacing-4xsmall;
+
+$toast-color-surface-default: $global-neutral-800;
+$toast-color-surface-success: $alias-surface-success-highlight;
+$toast-color-surface-error: $alias-surface-error-highlight;
+
+$toast-color-text-default: $alias-text-inverse;
+
+$toast-color-icon-default: $alias-icon-inverse;
+
+$toast-size-spacing-vertical: $alias-spacing-xsmall;
+$toast-size-spacing-horizontal: $alias-spacing-xsmall;
+$toast-size-spacing-gap: $alias-spacing-2xsmall;
+
+
+$toast-size-boder-radius: $alias-radius-2;
+
+$popup-color-surface-default: $alias-surface-white;
+$popup-color-text-title: $alias-text-primary;
+$popup-color-text-content: $alias-text-primary;
+$popup-color-text-error-code: $alias-text-secondary;
+$popup-color-icon-default: $alias-icon-warning;
+$popup-color-icon-stroke: $global-yellow-50;
+$popup-color-icon-background: $global-yellow-100;
+
+$popup-size-boder-radius: $alias-radius-3;
+$popup-size-spacing-right: $alias-spacing-small;
+$popup-size-spacing-left: $alias-spacing-small;
+$popup-size-spacing-bot: $alias-spacing-3xsmall;
+$popup-size-spacing-top: $alias-spacing-medium;
+$popup-size-spacing-gap: $alias-spacing-small;
+$popup-size-icon-base: $alias-icon-medium;
+$popup-size-icon-radius: $global-size-max;
+$popup-size-icon-stroke: $global-size-200;
+
+$tooltip-color-surface: $global-neutral-800;
+$tooltip-color-text: $alias-text-inverse;
+
+$tooltip-size-boder-radius: $alias-radius-3;
+$tooltip-size-spacing-vertical: $alias-spacing-xsmall;
+$tooltip-size-spacing-horizontal: $alias-spacing-xsmall;
+
+
+
+
+$checkbox-color-surface-default: $alias-surface-white;
+$checkbox-color-text-main: $alias-text-primary;
+$checkbox-color-icon-check: $alias-icon-inverse;
+$checkbox-color-icon-disable: $alias-icon-disable;
+$checkbox-color-boder-default: $alias-boder-default;
+$checkbox-color-surface-select: $alias-surface-brand;
+$checkbox-color-surface-disable: $global-neutral-100;
+$checkbox-color-surface-disable-select: $alias-surface-disable;
+$checkbox-color-surface-hover: $global-brand-300;
+$checkbox-color-icon-hover: $global-brand-300;
+$checkbox-color-boder-hover: $global-brand-300;
+$checkbox-color-text-sub: $alias-text-secondary;
+$checkbox-color-text-error: $alias-text-error;
+$checkbox-color-icon-Intermidate: $alias-icon-brand;
+$checkbox-color-boder-select: $alias-boder-brand;
+$checkbox-color-boder-Intermidate: $alias-boder-default;
+$checkbox-color-boder-disable: $alias-boder-disable;
+
+$checkbox-size-box-base: $alias-icon-medium;
+$checkbox-size-boder-radius: $alias-radius-1;
+$checkbox-size-boder-stroke: $alias-stroke-default;
+$checkbox-size-spacing-vertical: $alias-spacing-4xsmall;
+$checkbox-size-spacing-horizontal: $alias-spacing-2xsmall;
+
+$radio-color-surface-default: $alias-surface-white;
+$radio-color-surface-select: $alias-surface-white;
+$radio-color-surface-disable: $global-neutral-100;
+$radio-color-boder-default: $alias-boder-default;
+$radio-color-boder-disable: $alias-boder-disable;
+$radio-color-boder-select: $alias-boder-brand;
+$radio-color-text-main: $alias-text-primary;
+$radio-color-text-sub: $alias-text-secondary;
+$radio-color-text-error: $alias-text-error;
+$radio-color-icon-select: $alias-icon-brand;
+$radio-color-icon-disable: $alias-icon-disable;
+$radio-color-icon-hover: $global-brand-300;
+$radio-color-boder-hover: $global-brand-300;
+
+$radio-size-box-base: $alias-icon-medium;
+$radio-size-spacing-horizontal: $alias-spacing-2xsmall;
+$radio-size-spacing-vertical: $alias-spacing-4xsmall;
+$radio-size-boder-radius: $alias-radius-5;
+$radio-size-boder-stroke: $alias-stroke-default;
+
+$toggle-color-surface-default: $global-neutral-300;
+$toggle-color-surface-select: $alias-surface-brand;
+$toggle-color-surface-disable: $alias-surface-disable;
+$toggle-color-surface-disable-select: $global-brand-300;
+$toggle-color-knob-default: $alias-icon-inverse;
+$toggle-color-knob-disable: $alias-icon-disable;
+
+$toggle-size-radius: $alias-radius-5;
+$toggle-size-width: $alias-spacing-2xlarge;
+$toggle-size-height: $alias-spacing-large;
+// Badge
+$badge-color-surface: $alias-surface-brand;
+$badge-color-text: $alias-text-inverse;
+$badge-size-radius: $global-size-max;
+$badge-size-spacing-horizontal: $global-size-50;
+$badge-size-spacing-vertical: $global-size-0;
+
+// Navigation
+$nav-color-surface-default: $alias-surface-white;
+$nav-color-surface-hover: $global-brand-50;
+$nav-color-surface-select: $global-brand-50;
+$nav-color-icon-default: $alias-icon-default;
+$nav-color-icon-hover: $alias-icon-brand;
+$nav-color-icon-select: $alias-icon-brand;
+$nav-color-text-default: $alias-text-primary;
+$nav-color-text-hover: $alias-text-brand;
+$nav-color-text-select: $alias-text-brand;
+$nav-color-boder-default: $alias-boder-default;
+$nav-color-boder-select: $alias-boder-focus;
+
+$nav-size-icon-base: $alias-icon-medium;
+$nav-size-boder-radius: $alias-radius-2;
+$nav-size-boder-stroke: $alias-stroke-default;
+$nav-size-spacing-web-horizontal: $alias-spacing-2xsmall;
+$nav-size-spacing-web-vertical: $alias-spacing-xsmall;
+$nav-size-spacing-app-horizontal: $alias-spacing-small;
+$nav-size-spacing-app-vertical: $alias-spacing-small;
+$nav-size-spacing-app-gap: $alias-spacing-2xsmall;
+
+// Side Panel
+$side-panel-color-surface-default: $alias-surface-white;
+$side-panel-color-text-main: $alias-text-primary;
+$side-panel-color-text-sub: $alias-text-secondary;
+$side-panel-color-icon-default: $alias-icon-default;
+
+// Side Panel Item
+$side-panel-item-color-surface-default: $alias-surface-white;
+$side-panel-item-color-surface-hover: $alias-surface-white;
+$side-panel-item-color-surface-active: $alias-surface-white;
+$side-panel-item-color-surface-disable: $global-neutral-100;
+$side-panel-item-color-icon-default: $alias-icon-default;
+$side-panel-item-color-border-default: $global-neutral-200;
+$side-panel-item-color-border-hover: $alias-boder-hover;
+$side-panel-item-color-border-active: $alias-boder-brand;
+$side-panel-item-color-border-disable: $alias-boder-disable;
+$side-panel-item-color-text-main: $alias-text-primary;
+$side-panel-item-color-text-sub: $alias-text-secondary;
+
+$side-panel-size-icon-default: $alias-icon-large;
+$side-panel-size-spacing-gap-8: $alias-spacing-2xsmall;
+$side-panel-size-spacing-gap-12: $alias-spacing-xsmall;
+$side-panel-size-spacing-horizontal: $alias-spacing-large;
+$side-panel-size-spacing-vertical-16: $alias-spacing-small;
+$side-panel-size-spacing-gap-16: $alias-spacing-small;
+$side-panel-size-spacing-vertical-12: $alias-spacing-xsmall;
+
+$side-panel-item-size-icon-default: $alias-icon-large;
+$side-panel-item-size-spacing-horizontal: $alias-spacing-small;
+$side-panel-item-size-spacing-vertical: $alias-spacing-xsmall;
+$side-panel-item-size-spacing-gap-12: $alias-spacing-xsmall;
+$side-panel-item-size-spacing-gap-4: $alias-spacing-4xsmall;
+
+// Chip
+$chip-color-surface-default: $alias-surface-white;
+$chip-color-surface-hover: $alias-surface-white;
+$chip-color-surface-active: $alias-surface-selection-item-hover;
+$chip-color-text-default: $alias-text-primary;
+$chip-color-text-hover: $alias-text-brand;
+$chip-color-text-active: $alias-text-brand;
+$chip-color-boder-default: $alias-boder-default;
+$chip-color-boder-hover: $alias-boder-default;
+$chip-color-boder-active: $alias-boder-focus;
+$chip-color-icon-default: $alias-icon-default;
+$chip-color-icon-hover: $alias-icon-brand;
+$chip-color-icon-active: $alias-icon-brand;
+
+// Chip Sizes - Small
+$chip-size-small-icon-base: $alias-icon-xsmall;
+$chip-size-small-boder-radius: $alias-radius-7;
+$chip-size-small-boder-stroke: $alias-stroke-default;
+$chip-size-small-spacing-horizontal: $alias-spacing-4xsmall;
+$chip-size-small-spacing-vertical: $alias-spacing-4xsmall;
+$chip-size-small-spacing-gap: $alias-spacing-4xsmall;
+
+// Chip Sizes - Medium
+$chip-size-medium-icon-base: $alias-icon-small;
+$chip-size-medium-boder-radius: $alias-radius-7;
+$chip-size-medium-boder-stroke: $alias-stroke-default;
+$chip-size-medium-spacing-horizontal: $alias-spacing-2xsmall;
+$chip-size-medium-spacing-vertical: $alias-spacing-4xsmall;
+$chip-size-medium-spacing-gap: $alias-spacing-4xsmall;
+
+// Chip Sizes - Large
+$chip-size-large-icon-base: $alias-icon-medium;
+$chip-size-large-boder-radius: $alias-radius-7;
+$chip-size-large-boder-stroke: $alias-stroke-default;
+$chip-size-large-spacing-horizontal: $alias-spacing-2xsmall;
+$chip-size-large-spacing-vertical: $alias-spacing-4xsmall;
+$chip-size-large-spacing-gap: $alias-spacing-4xsmall;
+
+// Tag
+$tag-color-surface-blue: $global-blue-50;
+$tag-color-surface-green: $global-green-50;
+$tag-color-surface-red: $global-red-50;
+$tag-color-surface-yellow: $global-yellow-50;
+$tag-color-surface-black: $global-neutral-100;
+$tag-color-text-blue: $global-blue-500;
+$tag-color-text-green: $global-green-500;
+$tag-color-text-red: $global-red-500;
+$tag-color-text-yellow: $global-yellow-500;
+$tag-color-text-black: $global-neutral-800;
+
+$tag-size-spacing-horizontal: $alias-spacing-2xsmall;
+$tag-size-boder-radius: $alias-radius-3;
+$tag-size-spacing-vertical: $alias-spacing-5xsmall;
+
+// Scroll
+$scroll-color-thumb: $global-neutral-300;
+$scroll-color-track: $global-neutral-100;
+
+// Pagination
+$pagination-color-text-main: $alias-text-primary;
+$pagination-color-text-sub: $alias-text-secondary;
+$pagination-color-text-select: $alias-text-brand;
+$pagination-color-icon-main: $alias-text-primary;
+$pagination-color-icon-sub: $alias-text-secondary;
+$pagination-color-boder-divider: $alias-boder-default;
+$pagination-color-boder-select: $alias-boder-focus;
+
+$pagination-size-boder-radius: $alias-radius-2;
+$pagination-size-boder-stroke: $alias-stroke-default;
+
+// App Stepper
+$app-stepper-color-text-main: $alias-text-primary;
+$app-stepper-color-text-sub: $alias-text-secondary;
+$app-stepper-color-item-default: $alias-surface-pending;
+$app-stepper-color-item-active: $alias-surface-brand;
+$app-stepper-color-item-completed: $global-brand-300;
+$app-stepper-color-surface-default: $alias-surface-white;
+
+$app-stepper-size-spacing-gap-horizontal: $global-size-150;
+$app-stepper-size-boder-radius: $global-size-max;
+$app-stepper-size-spacing-top: $alias-spacing-2xsmall;
+$app-stepper-size-spacing-bot: $alias-spacing-xsmall;
+$app-stepper-size-spacing-left: $alias-spacing-small;
+$app-stepper-size-spacing-right: $alias-spacing-small;
+$app-stepper-size-spacing-gap-vertical: $alias-spacing-2xsmall;
+$app-stepper-size-spacing-gap-none: $alias-spacing-none;
+
+// Web Stepper
+$web-stepper-color-surface-default: $global-neutral-200;
+$web-stepper-color-surface-in-progress: $alias-surface-information;
+$web-stepper-color-text-main: $alias-text-primary;
+$web-stepper-color-text-sub: $alias-text-secondary;
+$web-stepper-color-text-in-progress: $alias-text-information;
+$web-stepper-color-border-default: $global-neutral-200;
+$web-stepper-color-border-in-progress: $alias-text-information;
+$web-stepper-color-icon-completed: $alias-icon-success;
+$web-stepper-color-icon-error: $alias-icon-error;
+$web-stepper-color-icon-pending: $alias-icon-warning;
+
+$web-stepper-size-icon: $alias-icon-medium;
+$web-stepper-size-gap: $alias-spacing-2xsmall;

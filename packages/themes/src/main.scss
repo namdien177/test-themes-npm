@@ -1,0 +1,9 @@
+@use "1-variables" as vars;
+
+@forward '1-variables/index';
+
+body {
+  font-family: vars.$typeface-font-brand, sans-serif;
+  font-weight: vars.$typeface-weight-regular;
+  font-size: vars.$global-size-400;
+}

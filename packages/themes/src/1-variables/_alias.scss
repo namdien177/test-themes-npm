@@ -1,0 +1,97 @@
+@import "global";
+
+$alias-background-gray: $global-neutral-50;
+$alias-background-white: $global-neutral-white;
+
+$alias-surface-brand: $global-brand-500;
+$alias-surface-white: $global-neutral-white;
+$alias-surface-gray: $global-neutral-50;
+$alias-surface-disable: $global-neutral-200;
+$alias-surface-bottomsheet: $global-neutral-white;
+$alias-surface-popup: $global-neutral-white;
+$alias-surface-warning-highlight: $global-yellow-500;
+$alias-surface-warning: $global-yellow-50;
+$alias-surface-error-highlight: $global-red-500;
+$alias-surface-error: $global-red-50;
+$alias-surface-success-highlight: $global-green-500;
+$alias-surface-success: $global-green-50;
+$alias-surface-information-highlight: $global-blue-500;
+$alias-surface-information: $global-blue-50;
+$alias-surface-pending-highlight: $global-neutral-300;
+$alias-surface-pending: $global-neutral-100;
+$alias-surface-selection-item-default: $global-neutral-white;
+$alias-surface-selection-item-selected: $global-brand-50;
+$alias-surface-selection-item-disable: $global-neutral-200;
+$alias-surface-selection-item-hover: $global-brand-50;
+
+$alias-text-primary: $global-neutral-800;
+$alias-text-secondary: $global-neutral-500;
+$alias-text-tertiary: $global-neutral-200;
+$alias-text-placeholder: $global-neutral-200;
+$alias-text-disable: $global-neutral-200;
+$alias-text-inverse: $global-neutral-white;
+$alias-text-link: $global-brand-500;
+$alias-text-link-hover: $global-brand-300;
+$alias-text-link-pressed: $global-brand-700;
+$alias-text-brand: $global-brand-500;
+$alias-text-brand-hover: $global-brand-300;
+$alias-text-brand-pressed: $global-brand-700;
+$alias-text-information: $global-blue-500;
+$alias-text-success: $global-green-500;
+$alias-text-error: $global-red-500;
+$alias-text-pending: $global-neutral-500;
+$alias-text-warning: $global-yellow-500;
+
+$alias-icon-default: $global-neutral-500;
+$alias-icon-disable: $global-neutral-300;
+$alias-icon-inverse: $global-neutral-white;
+$alias-icon-brand: $global-brand-500;
+$alias-icon-pending: $global-neutral-500;
+$alias-icon-information: $global-blue-500;
+$alias-icon-error: $global-red-500;
+$alias-icon-success: $global-green-500;
+$alias-icon-warning: $global-yellow-500;
+
+$alias-boder-warning: $global-yellow-500;
+$alias-boder-information: $global-blue-500;
+$alias-boder-error: $global-red-500;
+$alias-boder-pending: $global-neutral-100;
+$alias-boder-focus: $global-brand-500;
+$alias-boder-success: $global-green-500;
+$alias-boder-brand: $global-brand-500;
+$alias-boder-hover: $global-brand-500;
+$alias-boder-default: $global-neutral-100;
+$alias-boder-disable: $global-neutral-200;
+$alias-boder-inverse: $global-neutral-white;
+
+$alias-radius-none: $global-size-0;
+$alias-radius-1: $global-size-100;
+$alias-radius-2: $global-size-200;
+$alias-radius-3: $global-size-300;
+$alias-radius-4: $global-size-400;
+$alias-radius-5: $global-size-500;
+$alias-radius-6: $global-size-600;
+$alias-radius-7: $global-size-800;
+
+$alias-stroke-thin: $global-size-10;
+$alias-stroke-default: $global-size-25;
+$alias-stroke-thick: $global-size-50;
+
+$alias-spacing-none: $global-size-0;
+$alias-spacing-5xsmall: $global-size-50;
+$alias-spacing-4xsmall: $global-size-100;
+$alias-spacing-3xsmall: $global-size-150;
+$alias-spacing-2xsmall: $global-size-200;
+$alias-spacing-xsmall: $global-size-300;
+$alias-spacing-small: $global-size-400;
+$alias-spacing-medium: $global-size-500;
+$alias-spacing-large: $global-size-600;
+$alias-spacing-xlarge: $global-size-800;
+$alias-spacing-2xlarge: $global-size-1000;
+$alias-spacing-3xlarge: $global-size-1200;
+$alias-spacing-4xlarge: $global-size-1600;
+
+$alias-icon-small: $global-size-500;
+$alias-icon-medium: $global-size-600;
+$alias-icon-large: $global-size-800;
+$alias-icon-xsmall: $global-size-400;

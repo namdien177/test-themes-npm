@@ -1,0 +1,13 @@
+{
+  "name": "@monthly-party/themes",
+  "version": "0.0.1",
+  "dependencies": {},
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "exports": {
+    "./main.css": "./index.css",
+    "./assets/*": "./assets/*"
+  }
+}

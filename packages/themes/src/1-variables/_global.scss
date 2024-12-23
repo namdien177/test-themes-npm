@@ -1,0 +1,74 @@
+// Global value
+// Color
+$global-brand-700: #AB4308;
+$global-brand-500: #F4600C;
+$global-brand-300: #F8A06D;
+$global-brand-100: #FDDFCE;
+$global-brand-50: #FEEFE7;
+	
+$global-red-700: #CC1C0F;
+$global-red-500: #F04438;
+$global-red-300: #F68F88;
+$global-red-100: #FCDAD7;
+$global-red-50: #FEECEB;
+	
+$global-blue-700: #056AD6;
+$global-blue-500: #2E90FA;
+$global-blue-300: #82BCFC;
+$global-blue-100: #D5E9FE;
+$global-blue-50: #EAF4FF;
+	
+$global-green-700: #0B6F41;
+$global-green-500: #12B76A;
+$global-green-300: #71D4A6;
+$global-green-100: #D0F1E1;
+$global-green-50: #E7F8F0;
+	
+$global-yellow-700: #AD6406;
+$global-yellow-500: #F79009;
+$global-yellow-300: #FABC6B;
+$global-yellow-100: #FDE9CE;
+$global-yellow-50: #FEF4E6;
+	
+$global-neutral-white: #FFFFFF;
+$global-neutral-50: #F7F8F9;
+$global-neutral-100: #EBEDF0;
+$global-neutral-200: #C2C7D0;
+$global-neutral-300: #A6AEBB;
+$global-neutral-400: #8993A4;
+$global-neutral-500: #6B788E;
+$global-neutral-600: #505F79;
+$global-neutral-700: #354764;
+$global-neutral-800: #091E42;
+// Overlay
+$global-overlay-60: rgba(29, 41, 57, 0.6);
+$global-overlay-90: rgba(255, 255, 255, 0.9);
+$global-overlay-40: rgba(255, 255, 255, 0.4);
+// Size
+$global-size-0: 0;
+$global-size-10: 0,5px;
+$global-size-25: 1px;
+$global-size-50: 2px;
+$global-size-70: 3px;
+$global-size-100: 4px;
+$global-size-150: 6px;
+$global-size-200: 8px;
+$global-size-300: 12px;
+$global-size-400: 16px;
+$global-size-500: 20px;
+$global-size-600: 24px;
+$global-size-700: 28px;
+$global-size-800: 32px;
+$global-size-1000: 40px;
+$global-size-1200: 48px;
+$global-size-1600: 64px;
+$global-size-2400: 96px;
+$global-size-4000: 160px;
+$global-size-max: 99999px;
+
+// Shadow
+$global-shadow-top: 0px -1px 4px rgba(29, 41, 57, 0.15);
+$global-shadow-bottom: 0px 1px 4px rgba(29, 41, 57, 0.15);
+$global-shadow-left: 0px 1px 4px rgba(29, 41, 57, 0.15);
+$global-shadow-center: -1px 0px 4px rgba(29, 41, 57, 0.15);
+$global-shadow-right: 1px 0px 4px rgba(29, 41, 57, 0.15);
