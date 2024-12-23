@@ -1,8 +1,8 @@
-@use "1-variables" as vars;
+@use "./1-variables" as vars;
 
-@forward "1-variables";
-@forward "2-generics";
-@forward "3-components";
+@forward "./1-variables";
+@forward "./2-generics";
+@forward "./3-components";
 
 body {
   font-family: vars.$typeface-font-brand, sans-serif;

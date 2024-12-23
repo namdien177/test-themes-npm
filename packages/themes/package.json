@@ -1,6 +1,6 @@
 {
   "name": "namdh3-themes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dependencies": {},
   "type": "module",
   "main": "./index.js",
@@ -8,7 +8,7 @@
   "typings": "./index.d.ts",
   "exports": {
     "./index.css": "./index.css",
-    "./main.scss": "./main.scss",
+    "./scss/main.scss": "./scss/main.scss",
     "./assets/*": "./assets/*"
   }
 }

@@ -1,11 +1,12 @@
 @use '../1-variables' as vars;
-// Inter
+
+$assets-path: '../../assets';
 
 @font-face {
   font-weight: 300;
   font-family: "Inter";
   font-style: normal;
-  src: url("../../assets/fonts/Inter/Inter-Light.ttf") format("truetype");
+  src: url("#{$assets-path}/fonts/Inter/Inter-Light.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -13,7 +14,7 @@
   font-weight: vars.$typeface-weight-regular;
   font-family: "Inter";
   font-style: normal;
-  src: url("../../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+  src: url("#{$assets-path}/fonts/Inter/Inter-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -21,7 +22,7 @@
   font-weight: vars.$typeface-weight-medium;
   font-family: "Inter";
   font-style: normal;
-  src: url("../../assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
+  src: url("#{$assets-path}/fonts/Inter/Inter-Medium.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -29,7 +30,7 @@
   font-weight: vars.$typeface-weight-semibold;
   font-family: "Inter";
   font-style: normal;
-  src: url("../../assets/fonts/Inter/Inter-SemiBold.ttf") format("truetype");
+  src: url("#{$assets-path}/fonts/Inter/Inter-SemiBold.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -37,17 +38,17 @@
   font-weight: vars.$typeface-weight-bold;
   font-family: "Inter";
   font-style: normal;
-  src: url("../../assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
+  src: url("#{$assets-path}/fonts/Inter/Inter-Bold.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: 'MSB-Outline';
-  src: url('../../assets/fonts/MSB-Outline/MSB-Outline.eot?nrmgru');
-  src: url('../../assets/fonts/MSB-Outline/MSB-Outline.eot?nrmgru#iefix') format('embedded-opentype'),
-  url('../../assets/fonts/MSB-Outline/MSB-Outline.ttf?nrmgru') format('truetype'),
-  url('../../assets/fonts/MSB-Outline/MSB-Outline.woff?nrmgru') format('woff'),
-  url('../../assets/fonts/MSB-Outline/MSB-Outline.svg?nrmgru#MSB-Outline') format('svg');
+  src: url('#{$assets-path}/fonts/MSB-Outline/MSB-Outline.eot?nrmgru');
+  src: url('#{$assets-path}/fonts/MSB-Outline/MSB-Outline.eot?nrmgru#iefix') format('embedded-opentype'),
+  url('#{$assets-path}/fonts/MSB-Outline/MSB-Outline.ttf?nrmgru') format('truetype'),
+  url('#{$assets-path}/fonts/MSB-Outline/MSB-Outline.woff?nrmgru') format('woff'),
+  url('#{$assets-path}/fonts/MSB-Outline/MSB-Outline.svg?nrmgru#MSB-Outline') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

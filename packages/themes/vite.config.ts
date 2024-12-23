@@ -20,22 +20,22 @@ export default defineConfig({
       {
         input: 'src', // look in the project folder
         glob: 'main.scss', // for the executors.json file
-        output: './', // put the file in the root of the output bundle
+        output: './scss', // put the file in the root of the output bundle
       },
       {
         input: 'src/1-variables', // look in the project folder
         glob: '*.scss', // for the executors.json file
-        output: './1-variables', // put the file in the root of the output bundle
+        output: './scss/1-variables', // put the file in the root of the output bundle
       },
       {
         input: 'src/2-generics', // look in the project folder
         glob: '*', // for the executors.json file
-        output: './2-generics', // put the file in the root of the output bundle
+        output: './scss/2-generics', // put the file in the root of the output bundle
       },
       {
         input: 'src/3-components', // look in the project folder
         glob: '*', // for the executors.json file
-        output: './3-components', // put the file in the root of the output bundle
+        output: './scss/3-components', // put the file in the root of the output bundle
       },
     ]),
     dts({
@@ -64,9 +64,16 @@ export default defineConfig({
       external: [],
     },
     cssCodeSplit: true,
-    cssMinify: true,
+    cssMinify: 'lightningcss',
+    copyPublicDir: false,
   },
-
+  resolve: {
+    alias: {
+      // must keep the relative path in the source files
+      // since we also want to consume the source files `scss`
+      '../../assets': path.resolve(__dirname, 'assets'),
+    },
+  },
   test: {
     watch: false,
     globals: true,
